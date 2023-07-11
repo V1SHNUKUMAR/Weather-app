@@ -10,6 +10,8 @@
       integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
       crossorigin="anonymous"
     />
+    <!-- css -->
+    <link rel="stylesheet" href="input.css" />
   </head>
   <body>
     <!-- nav starts -->
@@ -81,7 +83,7 @@
               aria-label="Search"
               id="weatherCity"
             />
-            <button class="btn btn-outline-success" id="search" type="submit">
+            <button class="btn btn-outline-info" id="search" type="submit">
               Search
             </button>
           </form>
@@ -131,19 +133,19 @@
               </div>
               <div class="card-body">
                 <h1 class="card-title pricing-card-title">
-                  <span id="wind_degrees2"></span
+                  <span id="humidity2"></span
                   ><small class="text-body-secondary fw-light"> %</small>
                 </h1>
                 <ul class="list-unstyled mt-3 mb-4">
+                  <li>
+                    Humidity is <span class="text-info" id="humidity"></span>
+                  </li>
                   <li>
                     Wind degrees is
                     <span class="text-info" id="wind_degrees"></span>
                   </li>
                   <li>
                     Feels like <span class="text-info" id="feels_like"></span>
-                  </li>
-                  <li>
-                    Humidity is <span class="text-info" id="humidity"></span>
                   </li>
                 </ul>
               </div>

@@ -1,3 +1,8 @@
+function getFormattedTime(timeStamp) {
+  var time = new Date(timeStamp);
+  return time.toLocaleTimeString();
+}
+
 async function getWeather(city) {
   const url = `https://weather-by-api-ninjas.p.rapidapi.com/v1/weather?city=${city}`;
   const options = {
@@ -25,9 +30,9 @@ async function getWeather(city) {
       wind_speed.innerHTML = data.wind_speed;
       wind_speed2.innerHTML = data.wind_speed;
       wind_degrees.innerHTML = data.wind_degrees;
-      wind_degrees2.innerHTML = data.wind_degrees;
-      sunrise.innerHTML = data.sunrise;
-      sunset.innerHTML = data.sunset;
+      humidity2.innerHTML = data.humidity;
+      sunrise.innerHTML = getFormattedTime(data.sunrise);
+      sunset.innerHTML = getFormattedTime(data.sunset);
     }
   } catch (error) {
     console.error(error);
@@ -69,8 +74,8 @@ async function getShimlaWeather() {
       Shimla_max_temp.innerHTML = data.max_temp;
       Shimla_wind_speed.innerHTML = data.wind_speed;
       Shimla_wind_degrees.innerHTML = data.wind_degrees;
-      Shimla_sunrise.innerHTML = data.sunrise;
-      Shimla_sunset.innerHTML = data.sunset;
+      Shimla_sunrise.innerHTML = getFormattedTime(data.sunrise);
+      Shimla_sunset.innerHTML = getFormattedTime(data.sunset);
     }
   } catch (error) {
     console.error(error);
@@ -102,8 +107,8 @@ async function getBangaloreWeather() {
       Bangalore_max_temp.innerHTML = data.max_temp;
       Bangalore_wind_speed.innerHTML = data.wind_speed;
       Bangalore_wind_degrees.innerHTML = data.wind_degrees;
-      Bangalore_sunrise.innerHTML = data.sunrise;
-      Bangalore_sunset.innerHTML = data.sunset;
+      Bangalore_sunrise.innerHTML = getFormattedTime(data.sunrise);
+      Bangalore_sunset.innerHTML = getFormattedTime(data.sunset);
     }
   } catch (error) {
     console.error(error);
@@ -135,8 +140,8 @@ async function getLucknowWeather() {
       Lucknow_max_temp.innerHTML = data.max_temp;
       Lucknow_wind_speed.innerHTML = data.wind_speed;
       Lucknow_wind_degrees.innerHTML = data.wind_degrees;
-      Lucknow_sunrise.innerHTML = data.sunrise;
-      Lucknow_sunset.innerHTML = data.sunset;
+      Lucknow_sunrise.innerHTML = getFormattedTime(data.sunrise);
+      Lucknow_sunset.innerHTML = getFormattedTime(data.sunset);
     }
   } catch (error) {
     console.error(error);
@@ -168,8 +173,8 @@ async function getKolkataWeather() {
       Kolkata_max_temp.innerHTML = data.max_temp;
       Kolkata_wind_speed.innerHTML = data.wind_speed;
       Kolkata_wind_degrees.innerHTML = data.wind_degrees;
-      Kolkata_sunrise.innerHTML = data.sunrise;
-      Kolkata_sunset.innerHTML = data.sunset;
+      Kolkata_sunrise.innerHTML = getFormattedTime(data.sunrise);
+      Kolkata_sunset.innerHTML = getFormattedTime(data.sunset);
     }
   } catch (error) {
     console.error(error);
